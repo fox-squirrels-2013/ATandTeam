@@ -4,7 +4,7 @@ get '/' do
 end
 
 get '/tripmaps/new' do
-  erb :create_map, :layout => false
+  erb :_create_map, :layout => false
 end
 
 post '/tripmaps/new' do
