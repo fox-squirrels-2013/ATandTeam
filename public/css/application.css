@@ -1,25 +1,107 @@
 html { 
   height: 100% 
 }
+/*
+font-family: 'Abril Fatface', cursive;
+font-family: 'Wire One', sans-serif;*/
 
 body { 
   height: 100%; 
   margin: 0; 
   padding: 0;
+  background-color: blue;
+  position: relative;
+
+}
+#map-canvas { 
+  z-index: 0;
+  height: 80%; 
+  width: 70%;
+  right: 1em;
+  top: 2em;
+  position: absolute;
+  border-radius: 2em ;
+  /*right: 20%;*/
 }
 
-#map-canvas { 
-  height: 100% 
-}
+/*#map-stuff {
+  z-index: 4;
+  height: 80%; 
+  width: 70%;
+  right: 1em;
+  top: 2em;
+  position: absolute;
+  text-align: center;
+
+
+}*/
+
+
 
 .container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  position: absolute;
+  margin: 0 auto;
+  width: 20%;
+  top: 2em;
+  left: 1em;
+  /*right: 80%;*/
+  /*padding: 0px 20px 20px 20px;*/
+  /*border: 1px dotted black;*/
+  background-color: red;
 }
 
-th {
-  text-align: left;
+
+
+h1 {
+  text-align: center;
+  top: -1em;
+  color: white;
+  position: relative;
+  /*font-family: 'Wire One', sans-serif;*/
+  font-family: 'Dosis', sans-serif;
+  font-size: 15px;
+  /*font-family: 'Chango', cursive;*/
+  /*font-family: 'Abril Fatface', cursive;*/
+  background-color: brown;
+  border-radius: .2em;
+
+}
+
+#pac-input {
+  z-index: 8;
+  margin: 0 none;
+  position: relative;
+  text-align: center;
+  top: -3em;
+  font-family: 'Wire One', sans-serif;
+  border-radius: .2em;
+  
+  border: none;
+
+}
+
+.controls {
+  margin-top: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  padding: 0 11px 0 13px;
+  width: 400px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+}
+
+#target {
+  width: 345px;
 }
 
