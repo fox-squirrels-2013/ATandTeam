@@ -1,26 +1,82 @@
 html { 
   height: 100% 
 }
+/*
+font-family: 'Abril Fatface', cursive;
+font-family: 'Wire One', sans-serif;*/
 
 body { 
   height: 100%; 
   margin: 0; 
   padding: 0;
+  background-color: blue;
+  position: relative;
+}
+#map-canvas { 
+  z-index: 0;
+  height: 80%; 
+  width: 70%;
+  right: 1em;
+  top: 2em;
+  position: absolute;
+  border-radius: 2em ;
+  /*right: 20%;*/
+}
+#map-stuff {
+  z-index: 4;
+  height: 80%; 
+  width: 70%;
+  right: 1em;
+  top: 2em;
+  position: absolute;
+  /*background-color: black;*/
+  text-align: center;
+
+
+}
+
+
+
+.container {
+  position: absolute;
+  margin: 0 auto;
+  width: 20%;
+  top: 2em;
+  left: 1em;
+  /*right: 80%;*/
+  /*padding: 0px 20px 20px 20px;*/
+  /*border: 1px dotted black;*/
   background-color: red;
 }
 
-#map-canvas { 
-  height: 100% 
+
+
+h1 {
+  text-align: center;
+  top: -1em;
+  color: white;
+  position: relative;
+  /*font-family: 'Wire One', sans-serif;*/
+  font-family: 'Dosis', sans-serif;
+  font-size: 15px;
+  /*font-family: 'Chango', cursive;*/
+  /*font-family: 'Abril Fatface', cursive;*/
+  background-color: brown;
+  border-radius: .2em;
+
 }
 
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+#place_info {
+  z-index: 5;
+  margin: 0 none;
+  position: relative;
+  text-align: center;
+  top: -3em;
+  font-family: 'Wire One', sans-serif;
+  border-radius: .2em;
+  /*box-shadow: none;*/
+  border: none;
+
 }
 
-th {
-  text-align: left;
-}
 
