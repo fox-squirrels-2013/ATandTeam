@@ -22,18 +22,18 @@ body {
   border-radius: 2em ;
   /*right: 20%;*/
 }
-#map-stuff {
+
+/*#map-stuff {
   z-index: 4;
   height: 80%; 
   width: 70%;
   right: 1em;
   top: 2em;
   position: absolute;
-  /*background-color: black;*/
   text-align: center;
 
 
-}
+}*/
 
 
 
@@ -66,17 +66,41 @@ h1 {
 
 }
 
-#place_info {
-  z-index: 5;
+#pac-input {
+  z-index: 8;
   margin: 0 none;
   position: relative;
   text-align: center;
   top: -3em;
   font-family: 'Wire One', sans-serif;
   border-radius: .2em;
-  /*box-shadow: none;*/
+  
   border: none;
 
 }
 
+.controls {
+  margin-top: 16px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  padding: 0 11px 0 13px;
+  width: 400px;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  text-overflow: ellipsis;
+}
+
+#target {
+  width: 345px;
+}
 
