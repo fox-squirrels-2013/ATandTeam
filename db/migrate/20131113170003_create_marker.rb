@@ -1,6 +1,6 @@
-class Marker < ActiveRecord::Migration
+class CreateMarker < ActiveRecord::Migration
   def change
-    create table :Marker do |g|
+    create_table :markers do |g|
       g.belongs_to :tripmap
       g.string :name
       g.integer :lat

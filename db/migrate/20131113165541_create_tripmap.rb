@@ -1,6 +1,6 @@
-class TripMap < ActiveRecord::Migration
+class CreateTripmap < ActiveRecord::Migration
   def change
-    create table :tripmaps do |t|
+    create_table :tripmaps do |t|
       t.string :title
       t.string :description
       t.timestamps
