@@ -1,3 +1,18 @@
+html { 
+  height: 100% 
+}
+
+body { 
+  height: 100%; 
+  margin: 0; 
+  padding: 0;
+  background-color: red;
+}
+
+#map-canvas { 
+  height: 100% 
+}
+
 .container {
   margin: 20px auto;
   width: 600px;
@@ -8,3 +23,4 @@
 th {
   text-align: left;
 }
+
