@@ -1,12 +1,16 @@
-hey there, we're team AT&Team.
+### Purpose
+The Sinatra Skeleton:
 
-our app is as yet unnamed... probably going to go with trail
-blazrrr or a greek god name.  obvi.
+1. Provides a foundation for building challenges.
+2. Demonstrates a reasonable set of practices around building Sinatra applications.
+3. Eases the transition to Rails for Dev Bootcamp students
 
-our MVP consists of a google maps page where one can search
-for places or drop pins and then write descriptions.
+### Contributing
 
-release 2 involves the users and such.
+We would love for you to help make the skeleton more awesome, There are three ways to contribute:
 
-more info to be transcribed from vanessa's notebook soon.
+1. Ask for a bug fix or enhancement!
+2. Submit a pull request for a bug fix or enhancement!
+3. Code review an open pull request!
 
+Be prepared to give and receive specific, actionable, and kind feedback!
