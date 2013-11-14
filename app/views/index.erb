@@ -1,6 +1,12 @@
 <div class="container">
 
+  <input type="text" id="place_info" placeholder="what you lookin fo?">
   <h1>list of maps</h1>
+
+  <% @tripmaps.each do |tripmap|%>
+    <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.title%></a>
+  <%end%>
+
   
 </div>
 <table id="map-stuff">
@@ -15,3 +21,19 @@
 
  <div id="map-canvas"/>
 </table>
+
+<div id="map-stuff">
+  <h1>vanessa's trip to sf : 10.7.13 ~ 12.6.13</h1>
+ <input type="text" id="pac-input" value="where should i go?">
+
+
+  <button id = "create-map">New Trip</button>
+  <div id = "container-create-map"></div>
+</div>
+
+
+
+
+
+  <div id="map-canvas"/>
+
