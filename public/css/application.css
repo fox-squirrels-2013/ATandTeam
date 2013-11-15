@@ -6,21 +6,14 @@ html {
 /*font-family: 'Wire One', sans-serif;*/
 /*font-family: 'Wire One', sans-serif;*/
 
-
-
-
 body { 
   height: 100%; 
   margin: 0; 
   padding: 0;
-  /*background-color: #b3d1ff;*/
-
   background-color: #8d9fbc;
   position: relative;
-  /*font-family: 'Wire One', sans-serif;*/
   font-family: 'Dosis', sans-serif;
   letter-spacing:1.2px;
-
 }
 
 #container-create-map {
@@ -30,7 +23,7 @@ body {
 #map-stuff {
   text-align: center;
   width: 100%;
-  height: 100%
+  /*height: 100%*/
   position: absolute;
   border-radius: 2em;
   -moz-border-radius: 2em;
@@ -59,7 +52,6 @@ body {
   left: 1em;
   background-color: #C2C2D6;
   border-radius: .2em;
-  /*overflow:   hidden;*/
 }
 
 h1 {
@@ -70,8 +62,13 @@ h1 {
   position: absolute;
   font-family: 'Dosis', sans-serif;
   font-size: 15px;
-  /*background-color: #0C9;*/
   border-radius: .2em;
+}
+
+h2 a{
+  top: 0;
+  position: relative;
+  color: #B8E65C;
 }
 
 a {
@@ -83,10 +80,6 @@ a {
 
 a:hover {
   color: #E6E65C;
-}
-h2 {
-  position: relative;
-  color: #B8E65C;
 }
 
 .logout{
