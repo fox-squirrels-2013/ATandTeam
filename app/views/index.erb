@@ -1,14 +1,17 @@
 <div class="container">
 
+  <%= erb :_signup %>
+
+
   <button id = "create-map">New Trip</button>
 
   <div id = "container-create-map"></div>
 
   <h1>list of maps</h1>
+  
+  <% @users.each do |tripmap|%>
 
-  <% @tripmaps.each do |tripmap|%>
-
-  <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.title%></a>
+  <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.username%></a>
 
   <%end%>
   
