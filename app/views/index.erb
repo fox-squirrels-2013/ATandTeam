@@ -2,26 +2,21 @@
 
   <%= erb :_signup %>
 
-
   <button id = "create-map">New Trip</button>
 
   <div id = "container-create-map"></div>
 
   <h1>list of maps</h1>
-  
-  <% @users.each do |tripmap|%>
-
-  <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.username%></a>
-
+  <p><% @tripmaps.each do |tripmap|%></p>
+    <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.title%></a>
   <%end%>
   
 </div>
 
 <div id="map-stuff">
  
+ 
  <!--  <input type="text" id="pac-input" placeholder="where should i go?">
-
 </div>
-
 <div id="map-canvas"/>
  -->
