@@ -20,6 +20,30 @@ body {
   background-color: #C2C2D6;
 }
 
+#shipp {
+  text-align: center;
+  width: 60%;
+  position: relative;
+  left: 100px;
+  border-radius: 2em;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  overflow: hidden;
+}
+
+#ship {
+  text-align: center;
+  width: 60%;
+  left: 350px;
+  right: 10px;
+  /*height: 100%*/
+  position: relative;
+  border-radius: 2em;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  overflow: hidden;
+}
+
 #map-stuff {
   text-align: center;
   width: 100%;
@@ -85,7 +109,7 @@ a:hover {
 #signup-button{
   position: relative;
   top: 0px;
-  left: 4px;
+  left: 8px;
 }
 
 .logout{
