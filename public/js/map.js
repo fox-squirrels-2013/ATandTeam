@@ -6,7 +6,7 @@ var box = '<input id="description" type="text" placeholder="write a description!
 
 $( document ).ready(function(){
   $('body').on('click', '#savebutton', function(){
-    console.log("saved!")
+    de
   })
 
 
@@ -90,7 +90,9 @@ function initialize(){
   function createClickMarker(e){
     var marker = new google.maps.Marker({
       map: map,
-      position: e.latLng
+      position: e.latLng,
+      title: "placeholder"
+      //icon: "default"
     })
     
     google.maps.event.addListener(marker, 'click', function() {
