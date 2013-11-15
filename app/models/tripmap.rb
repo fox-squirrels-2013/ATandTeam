@@ -2,7 +2,7 @@ class Tripmap < ActiveRecord::Base
   has_many :markers
   belongs_to :user
 
-  def user_name
+  def username
     User.find(self.user_id).username
   end 
 end
