@@ -38,8 +38,6 @@ get '/tripmaps/:id' do
   erb :map
 end
 
-<<<<<<< HEAD
-=======
 get '/markers/:map_id' do
 	content_type :json
 	@markers = Marker.where(tripmap_id: params[:map_id])
@@ -60,4 +58,3 @@ post '/savemarker' do
 	 							long: long, 
 	 							description: desc
 end
->>>>>>> master
