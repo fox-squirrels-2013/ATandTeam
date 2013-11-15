@@ -1,28 +1,29 @@
 html { 
   height: 100% 
-
 }
 
 /*font-family: 'Abril Fatface', cursive;*/
 /*font-family: 'Wire One', sans-serif;*/
-/*font-family: 'Chango', cursive;*/
-/*font-family: 'Abril Fatface', cursive;*/
 /*font-family: 'Wire One', sans-serif;*/
+
+
+
 
 body { 
   height: 100%; 
   margin: 0; 
   padding: 0;
-  background-color: blue;
+  background-color: #94B8B8;
   position: relative;
   font-family: 'Wire One', sans-serif;
 }
 
 #container-create-map {
-  background-color: red;
+  background-color: #C2C2D6;
 }
 
 #map-stuff {
+  text-align: center;
   width: 100%;
   height: 100%
   position: absolute;
@@ -34,7 +35,6 @@ body {
 
 #map-canvas { 
   position: absolute;
-
   height: 80%; 
   width: 70%;
   right: 1em;
@@ -49,21 +49,30 @@ body {
   position: absolute;
   margin: 0 auto;
   width: 20%;
-  top: 2em;
+  top: 4em;
   left: 1em;
-  background-color: red;
+  background-color: #C2C2D6;
+  border-radius: .2em;
+  /*overflow:   hidden;*/
 }
 
 h1 {
   z-index: 55;
   text-align: center;
-  top: -1em;
+  top: -2em;
   color: white;
   position: absolute;
   font-family: 'Dosis', sans-serif;
   font-size: 15px;
-  background-color: brown;
+  background-color: #0C9;
   border-radius: .2em;
+}
+
+#trip-title {
+  position: relative;
+  top: 0em;
+  font-family: 'Abril Fatface', cursive;
+  /*font-family: 'Chango', cursive;*/
 }
 
 .controls {
@@ -82,7 +91,6 @@ h1 {
   /*position: absolute;*/
   text-align: center;
   top: -3em;
-  
   border-radius: .2em;
   border: none;
   width: 50%;
