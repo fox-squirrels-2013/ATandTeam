@@ -104,7 +104,6 @@ $( document ).ready(function(){
         map: map,
         position: e.latLng,
         title: "placeholder"
-        //icon: "default"
       })
       
       google.maps.event.addListener(marker, 'click', function() {
@@ -123,9 +122,8 @@ $( document ).ready(function(){
         var m = data.markers[index]
         var myLatLng = new google.maps.LatLng(m.lat, m.long)
         var marker = new google.maps.Marker({
-          position: myLatLng // example => (37.783062, -122.41569)
-          // this will be marker.title at some point
-          //icon: "default"
+          position: myLatLng, // example => (37.783062, -122.41569)
+          title: m.desc 
         }).setMap(map);
       }
     });
