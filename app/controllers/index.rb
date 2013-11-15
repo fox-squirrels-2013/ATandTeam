@@ -17,13 +17,17 @@ post '/' do
   redirect '/'
 end
 
+get '/signup' do
+  erb :signup
+end
+
 get '/logout' do
   session.clear
   redirect '/'
 end
 
 get '/login' do
-  erb :_login, :layout => true
+  erb :login, :layout => true
 end
 
 post '/login' do

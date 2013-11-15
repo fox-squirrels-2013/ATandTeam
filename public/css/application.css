@@ -82,6 +82,12 @@ a:hover {
   color: #E6E65C;
 }
 
+#signup-button{
+  position: relative;
+  top: 0px;
+  left: 4px;
+}
+
 .logout{
   position: absolute;
   color: #B8E65C;
