@@ -32,9 +32,10 @@ post '/tripmaps/new' do
   redirect '/'
 end
 
-
 get '/tripmaps/:id' do
 	@tripmap = Tripmap.find(params[:id])
+  @tripmaps = Tripmap.all
+  
   erb :map
 end
 
