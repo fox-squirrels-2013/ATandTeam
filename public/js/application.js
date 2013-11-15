@@ -8,9 +8,9 @@ function initialize() {
   });
 
   var defaultBounds = new google.maps.LatLngBounds(
-      new google.maps.LatLng(-33.8902, 151.1759),
-      new google.maps.LatLng(-33.8474, 151.2631));
-  map.fitBounds(defaultBounds);
+    new google.maps.LatLng(-33.8902, 151.1759),
+    new google.maps.LatLng(-33.8474, 151.2631));
+    map.fitBounds(defaultBounds);
 
   // Create the search box and link it to the UI element.
   var input = /** @type {HTMLInputElement} */(
