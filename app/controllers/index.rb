@@ -13,7 +13,6 @@ end
 post '/' do
   @user = User.create(params)
   session[:id] = @user.id
-  p params
   redirect '/'
 end
 
@@ -39,7 +38,7 @@ post '/tripmaps/new' do
 end
 
 get '/tripmaps/:id' do
-	@tripmap = Tripmap.find(params[:id])
+	session[:current_map] = Tripmap.find(params[:id])
   @tripmaps = Tripmap.all
 
   erb :map
@@ -60,7 +59,7 @@ post '/savemarker' do
 	lat = params["markerPostition"].split[0].delete('(').delete(',').to_f
   long = params["markerPostition"].split[1].delete(')').to_f
 
-  Marker.create tripmap_id: 1, #use dat current map helper
+  Marker.create tripmap_id: current_map.id, #use dat current map helper
   lat: lat, 
   long: long, 
   description: desc
