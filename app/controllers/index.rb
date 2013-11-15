@@ -17,6 +17,11 @@ post '/' do
   redirect '/'
 end
 
+get '/logout' do
+  session.clear
+  redirect '/'
+end
+
 get '/login' do
   erb :_login, :layout => true
 end
@@ -34,7 +39,7 @@ get '/tripmaps/new' do
 end
 
 post '/tripmaps/new' do
-  @tripmap = Tripmap.create(title: params[:title])
+  @tripmap = Tripmap.create(title: params[:title],user_id: session[:id])
   redirect '/'
 end
 

@@ -82,6 +82,13 @@ a:hover {
   color: #E6E65C;
 }
 
+.logout{
+  position: absolute;
+  color: #B8E65C;
+  top: 0px;
+  right: 10px;
+}
+
 #trip-title {
   position: relative;
   top: 0em;

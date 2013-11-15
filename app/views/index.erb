@@ -7,9 +7,7 @@
 
   <h1>list of maps</h1>
   <p><% @tripmaps.each do |tripmap|%></p>
-    <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.title%></a><br>
+    <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.user_name%>'s <%=tripmap.title%></a><br>
   <%end%>
   
 </div>
-
-<div id="map-stuff">
