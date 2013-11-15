@@ -4,6 +4,7 @@ var markers = [];  //temporarily displayed search markers
 var saved_markers = []; //search markers populated from trip database
 var box = '<form><input id="description" type="text" placeholder="write a description!" name="inputbox"> <input id="savebutton" type="submit" value="Save me!"><form>'
 var selectedMarker;
+
 $( document ).ready(function(){
   $('body').on('click', '#savebutton', function(e){
     e.preventDefault();
@@ -89,13 +90,10 @@ $( document ).ready(function(){
         position: place.geometry.location
       });
 
-      google.maps.event.addListener(marker, 'click', function() {
-        debugger
-        infowindow.setContent(box);
-        infowindow.open(map, this);
+      google.maps.event.addListener(marker, 'click', function(e) {
+        createClickMarker(e);
       });
-      selectedMarker = marker
-      return marker
+      
     }
 
     //Click Function Create Marker
