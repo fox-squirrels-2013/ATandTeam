@@ -15,7 +15,8 @@ body {
   padding: 0;
   background-color: #94B8B8;
   position: relative;
-  font-family: 'Wire One', sans-serif;
+  /*font-family: 'Wire One', sans-serif;*/
+  font-family: 'Dosis', sans-serif;
 }
 
 #container-create-map {
@@ -68,10 +69,15 @@ h1 {
   border-radius: .2em;
 }
 
+h2 {
+  position: relative;
+  color: #B8E65C;
+}
+
 #trip-title {
   position: relative;
   top: 0em;
-  font-family: 'Abril Fatface', cursive;
+  /*font-family: 'Abril Fatface', cursive;*/
   /*font-family: 'Chango', cursive;*/
 }
 
