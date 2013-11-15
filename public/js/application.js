@@ -1,4 +1,9 @@
+$( document ).ready(function(){
+  $('body').on('click', '#savebutton', function(){
+    debugger
+  })
 
+})
 
 function initialize() {
 
@@ -57,10 +62,19 @@ function initialize() {
       // console.log(marker)
       google.maps.event.addListener(marker, 'click', function(e) { 
         marker.position = e.latLng;
-        infowindow.setContent(marker.position.toString())
+        // var mobutton = document.getElementById('mobutton')
+        var box = '<input id="description" type="text" placeholder="write a description!"> <input id="savebutton" type="submit" value="Save me!">'
+        infowindow.setContent(box)
         infowindow.open(map, marker);
-      });
+         
+ 
+      })
+
     }
+
+    // document.getElementById('#savebutton').addEventListener('submit', function(){
+    //         debugger
+    //       })
 
     map.fitBounds(bounds);
   });
@@ -83,16 +97,20 @@ function initialize() {
 
   var addMarker = function(event) {
     var markered = createMarker(event.latLng)
-    
+    markers << markered
     google.maps.event.addListener(markered, 'click', function(e) { 
        markered.position = e.latLng;
-       infowindow.setContent(markered.position.toString())
+       var button = '<input id="savebutton" type="button" value="Save me!">'
+        // document.getElementById('mobutton').style.display = 'block'
+        var description = '<input id="description" type="text" placeholder="write a description!">'
+        infowindow.setContent(description + button)
         infowindow.open(map, markered);
     });
   }
 
   google.maps.event.addListener(map, 'click', addMarker)
- 
+
+
  
 }
 
