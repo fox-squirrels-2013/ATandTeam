@@ -4,6 +4,7 @@ var markers = [];  //temporarily displayed search markers
 var saved_markers = []; //search markers populated from trip database
 var box = '<form><input id="description" type="text" placeholder="write a description!" name="inputbox"> <input id="savebutton" type="submit" value="Save me!"><form>'
 var selectedMarker;
+
 $( document ).ready(function(){
   $('body').on('click', '#savebutton', function(e){
     e.preventDefault();
@@ -32,7 +33,7 @@ $( document ).ready(function(){
     });
     
     //Defining bounds and infowindow object
-    var bounds = new google.maps.LatLngBounds();
+    // var bounds = new google.maps.LatLngBounds();
     infowindow = new google.maps.InfoWindow();
     
     //listener for changes in boundary
@@ -59,7 +60,7 @@ $( document ).ready(function(){
     //Populating search markers based on search
     google.maps.event.addListener(searchBox, 'places_changed', function() {
       var places = searchBox.getPlaces();
-      
+      var bounds = new google.maps.LatLngBounds();
       for (var i = 0, marker; marker = markers[i]; i++) {
         marker.setMap(null);
       } 
@@ -67,7 +68,9 @@ $( document ).ready(function(){
       for (var i = 0, place; place = places[i]; i++) {
         marker = createMarker(place)
         markers.push(marker)
+        bounds.extend(place.geometry.location);
       }
+      map.fitBounds(bounds);
     })
 
 
@@ -89,13 +92,10 @@ $( document ).ready(function(){
         position: place.geometry.location
       });
 
-      google.maps.event.addListener(marker, 'click', function() {
-        debugger
-        infowindow.setContent(box);
-        infowindow.open(map, this);
+      google.maps.event.addListener(marker, 'click', function(e) {
+        createClickMarker(e);
       });
-      selectedMarker = marker
-      return marker
+      
     }
 
     //Click Function Create Marker
@@ -118,17 +118,13 @@ $( document ).ready(function(){
     var mapId = $('#map-canvas').data("map-id");
 
     $.get('/markers/' + mapId).done(function(data){
-    // debugger
-
+    
       for (var index in data.markers) {
         var m = data.markers[index]
-        // debugger
-        console.log(m.lat,m.long)
         var myLatLng = new google.maps.LatLng(m.lat, m.long)
         var marker = new google.maps.Marker({
-
           position: myLatLng // example => (37.783062, -122.41569)
-           // this will be marker.title at some point
+          // this will be marker.title at some point
           //icon: "default"
         }).setMap(map);
       }
