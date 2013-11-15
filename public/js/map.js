@@ -76,11 +76,11 @@ $( document ).ready(function(){
     function createMarker(place){
       var placeLoc = place.geometry.location;
       var image = {
-          url: place.icon,
-          size: new google.maps.Size(71, 71),
-          origin: new google.maps.Point(0, 0),
-          anchor: new google.maps.Point(17, 34),
-          scaledSize: new google.maps.Size(25, 25)
+        url: place.icon,
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25)
       };
       var marker = new google.maps.Marker({
         map: map,
@@ -90,6 +90,7 @@ $( document ).ready(function(){
       });
 
       google.maps.event.addListener(marker, 'click', function() {
+        debugger
         infowindow.setContent(box);
         infowindow.open(map, this);
       });
@@ -114,25 +115,26 @@ $( document ).ready(function(){
       return marker
     }
 
+    var mapId = $('#map-canvas').data("map-id");
+
+    $.get('/markers/' + mapId).done(function(data){
+    // debugger
+
+      for (var index in data.markers) {
+        var m = data.markers[index]
+        // debugger
+        console.log(m.lat,m.long)
+        var myLatLng = new google.maps.LatLng(m.lat, m.long)
+        var marker = new google.maps.Marker({
+
+          position: myLatLng // example => (37.783062, -122.41569)
+           // this will be marker.title at some point
+          //icon: "default"
+        }).setMap(map);
+      }
+    });
+
   }
   google.maps.event.addDomListener(window, 'load', initialize);
   
-  var mapId = $('#map-canvas').data("map-id");
-  
-  $.get('/markers/' + mapId).done(function(data){
-    // debugger
-
-    for (var index in data.markers) {
-      var m = data.markers[index]
-      // debugger
-      console.log(m)
-      var myLatLng = new google.maps.LatLng(m.lat, m.long)
-      var marker = new google.maps.Marker({
-        
-        position: myLatLng, // example => (37.783062, -122.41569)
-        title: "placeholder" // this will be marker.title at some point
-        //icon: "default"
-      }).setMap(map);
-    }
-  });
 });

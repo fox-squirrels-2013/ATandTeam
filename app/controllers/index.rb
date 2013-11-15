@@ -28,6 +28,7 @@ get '/markers/:map_id' do
 end
 
 post '/savemarker' do
+	puts params
 	desc = params["markerDescription"].split("=")[1].split("+").join(" ")
 	lat = params["markerPostition"].split[0].delete('(').delete(',').to_f
 	long = params["markerPostition"].split[1].delete(')').to_f
