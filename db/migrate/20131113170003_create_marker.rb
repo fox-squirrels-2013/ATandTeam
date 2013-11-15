@@ -3,8 +3,8 @@ class CreateMarker < ActiveRecord::Migration
     create_table :markers do |g|
       g.belongs_to :tripmap
       g.string :name
-      g.integer :lat
-      g.integer :long
+      g.float :lat
+      g.float :long
       g.string :icon
       g.string :description
       g.timestamps
