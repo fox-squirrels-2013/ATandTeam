@@ -16,8 +16,17 @@ post '/' do
   redirect '/'
 end
 
+get '/signup' do
+  erb :signup
+end
+
+get '/logout' do
+  session.clear
+  redirect '/'
+end
+
 get '/login' do
-  erb :_login, :layout => true
+  erb :login, :layout => true
 end
 
 post '/login' do
@@ -33,13 +42,13 @@ get '/tripmaps/new' do
 end
 
 post '/tripmaps/new' do
-  @tripmap = Tripmap.create(title: params[:title])
+  @tripmap = Tripmap.create(title: params[:title],user_id: session[:id])
   redirect '/'
 end
 
 get '/tripmaps/:id' do
 	session[:current_map] = Tripmap.find(params[:id])
-  @tripmaps = Tripmap.all
+  @tripmaps = Tripmap.where(user_id: @tripmap.user_id)
 
   erb :map
 end

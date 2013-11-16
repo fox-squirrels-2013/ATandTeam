@@ -7,9 +7,14 @@
 
   <h1>list of maps</h1>
   <p><% @tripmaps.each do |tripmap|%></p>
-    <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.title%></a><br>
+    <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.username%>'s <%=tripmap.title%></a><br>
   <%end%>
   
 </div>
 
-<div id="map-stuff">
+<!-- <div id="map-stuff"> -->
+
+<img src= "/ship.png" id="ship" alt="its a boat">
+
+
+<!-- </div> -->

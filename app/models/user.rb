@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include BCrypt
-
+  has_many :tripmaps
   def password
       @password ||= Password.new(password_hash)
     end
