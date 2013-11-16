@@ -123,8 +123,15 @@ $( document ).ready(function(){
         var myLatLng = new google.maps.LatLng(m.lat, m.long)
         var marker = new google.maps.Marker({
           position: myLatLng, // example => (37.783062, -122.41569)
-          title: m.desc 
-        }).setMap(map);
+          title: m.desc// this will be m.title 
+        })
+
+        google.maps.event.addListener(marker, 'click', function(e) {
+          infowindow.setContent(this.title);
+          infowindow.open(map, this);
+        });
+
+        marker.setMap(map);
       }
     });
 

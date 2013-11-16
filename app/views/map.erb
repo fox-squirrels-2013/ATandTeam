@@ -2,12 +2,12 @@
 
   <h1>list of <%=@tripmap.username%>'s trips</h1>
   <p><% @tripmaps.each do |tripmap|%></p>
-    <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.title%></a>
+    <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.title%></a><br/>
   <%end%>
 
 </div>
 
-<div id="map-canvas" data-map-id="<%=@tripmap.id%>"></div>
+<div id="map-canvas" data-map-id="<%=current_map.id%>"></div>
 
 <div id="map-stuff">
 
