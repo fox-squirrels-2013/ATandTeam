@@ -28,7 +28,8 @@
 
   <%= yield %>
   
-
+<%if session[:id]%>
   <a class = "logout" href='/logout'>Logout</a>
+<%end%> 
 </body>
 </html>
