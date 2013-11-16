@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1>list of <%=@tripmap.username%>'s trips</h1>
+  <h1>list of <%=current_map.username%>'s trips</h1>
   <p><% @tripmaps.each do |tripmap|%></p>
     <a href = "/tripmaps/<%=tripmap.id%>"><%=tripmap.title%></a><br/>
   <%end%>

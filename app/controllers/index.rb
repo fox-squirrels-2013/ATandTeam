@@ -48,7 +48,7 @@ end
 
 get '/tripmaps/:id' do
 	session[:current_map] = Tripmap.find(params[:id])
-  @tripmaps = Tripmap.where(user_id: @tripmap.user_id)
+  @tripmaps = Tripmap.where(user_id: current_map.user_id)
 
   erb :map
 end
